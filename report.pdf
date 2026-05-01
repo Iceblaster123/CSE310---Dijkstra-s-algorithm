@@ -1,0 +1,22 @@
+Project Members: Koowum Joshi
+
+Problems:
+    Because I am using the Intel based macbooks, I don't think that the demo works for me.
+    I think it is built for the M-chips or I am using it wrong, whatever the case, it made 
+    programming take a lot longer for me. Additionally, I think that the descriptions for the project
+    could be better. Besides that I really enjoyed this project.
+Bugs:
+    I stated this above, but the demo build only works for the M-chip macbooks because they compile for
+    Arm chips and my computer is an x84 based CPU. I tried to see if I could get it to work on a VM, but
+    it turned out to be too much work for what it was. I think that you should look into that however
+References:
+    In general, I didnt really use any books but I did use a couple of youtube videos. In particular
+    https://www.youtube.com/watch?v=bZkzH5x0SKU & https://www.youtube.com/watch?v=EFg3u_E6eHU&t=201s. I also used
+    the C++ documentation and basic google searches.
+Design Decisions:
+    First and foremost, the main thing I did was not use the Edge and Vertex classes that were provided. I found it to
+    be easier to put everything into a 2D array (my adjacency matrix), and do all my computation from there.
+    I did not make a structure for the adjacency matrix, however I did consider it. I just thought it would be easier
+    to tranverse a 2D array rather than a series of structs. To compute the path for Djikstra's, I used 2 arrays, one that
+    keeps all the nodes that I have visited, and another that tracks the current distance I have traveled to find a certain node.
+    We initialized all the nodes with some large arbitrary value so that we know that we haven't currently found a path. Then we scan through the whole scoreboard and pick the node with the smallest distance. Once we find the shortest path, we mark it as visited, and use that as a "stepping stone". This keeps running until we find the shortest distance from the node we are concerned with and then we move onto the next node. This keeps running until we find the shortest distance possible.
