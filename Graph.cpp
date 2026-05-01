@@ -76,7 +76,7 @@ void Graph::dijkstra(int source){
     bool* visited = new bool[numNodes+1];
 
     for(int i = 1; i <= numNodes; i++){
-        dist[i] = INT_MAX;
+        dist[i] = 9999999999;
         visited[i] = false;
     }
     dist[source] = 0;
