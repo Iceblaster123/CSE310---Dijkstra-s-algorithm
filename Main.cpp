@@ -6,7 +6,6 @@
 int main(){
 
     // start of the initial pipeline that loads the test case file stream from std::cin
-    std::cout << "we can start\n";
     int numOfVertices;
     int numOfEdges;
 
