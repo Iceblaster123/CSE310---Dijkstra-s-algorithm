@@ -16,18 +16,15 @@ Graph::~Graph(){
 }
 
 void Graph::setSize(int numOfVertices, int numOfEdges){
-    std::cout << "setSize called: " << numOfVertices << " " << numOfEdges << std::endl;
     numNodes = numOfVertices;
     numEdges = numOfEdges;
     matrix = new int*[numNodes+1];
-    std::cout << "matrix allocated" << std::endl;
     for(int i = 0; i <= numNodes; i++){
         matrix[i] = new int[numNodes+1];
         for(int j = 0; j <= numNodes; j++){
             matrix[i][j] = 0;
         }
     }
-    std::cout << "matrix initialized" << std::endl;
 }
 
 void Graph::addNode(int start, int end, int weight){
