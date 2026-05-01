@@ -79,7 +79,6 @@ void Graph::dijkstra(int source){
     dist[source] = 0;
 
     for(int count = 0; count < numNodes; count++){
-        // pick unvisited node with smallest distance
         int u = -1;
         for(int i = 1; i <= numNodes; i++){
             if(!visited[i] && (u == -1 || dist[i] < dist[u])){
@@ -89,7 +88,6 @@ void Graph::dijkstra(int source){
 
         visited[u] = true;
 
-        // relax all neighbors
         for(int v = 1; v <= numNodes; v++){
             if(matrix[u][v] != 0 && !visited[v]){
                 if(dist[u] + matrix[u][v] < dist[v]){
