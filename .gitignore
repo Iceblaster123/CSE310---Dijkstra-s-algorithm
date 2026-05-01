@@ -1,5 +1,5 @@
 #this is all the files we dont want to see
-.template_code/dijkstra
-.template_code/Edge.o
-.template_code/Graph.o
-.template_code/Vertex.o
+.dijkstra
+.Edge.o
+.Graph.o
+.Vertex.o
